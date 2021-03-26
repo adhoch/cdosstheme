@@ -1,0 +1,7 @@
+.grid {
+  @include grid($col: 1);
+
+  @include breakpoint('sm') {
+    @include grid($col: 2);
+  }
+}

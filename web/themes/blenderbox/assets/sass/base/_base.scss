@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto; // sticky footer
+  color: $bbox-black;
+}
+
+*:focus { /* Some exciting button focus styles */ }
+*:focus:not(:focus-visible) {
+  /* Undo all the above focused button styles
+     if the button has focus but the browser wouldn't normally
+     show default focus styles */
+}
+
+*:focus-visible {
+  /* Some even *more* exciting button focus styles */
+  outline: 1px dotted $bbox-black;
+}

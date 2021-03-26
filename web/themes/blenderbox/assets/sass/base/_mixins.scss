@@ -1,0 +1,105 @@
+////////// breakpoints
+$breakpoints: (
+  'xs':  576px,
+  'sm':  768px,
+  'md':  992px,
+  'lg':  1200px
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+////////// grid
+@mixin grid($col: 1) {
+  // display: grid;
+  // grid-template-columns: repeat($col, minmax(250px, 1fr));
+  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  // grid-gap: $grid-gap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  & > * {
+    width: percentage(1 / $col);
+  }
+}
+
+////////// container
+@mixin container {
+  // width: $containerWidth;
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $outer-margin-mobile;
+  padding-right: $outer-margin-mobile;
+
+  @include breakpoint('md') {
+    padding-left: $outer-margin-desktop;
+    padding-right: $outer-margin-desktop;
+  }
+}
+
+////////// typography
+@mixin heading {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+@mixin h1 {
+  @include heading;
+  font-size: 96px;
+  line-height: 100px;
+}
+
+@mixin h2 {
+  @include heading;
+  font-size: 54px;
+  line-height: 60px;
+}
+
+@mixin h3 {
+  @include heading;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin h4 {
+  @include heading;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+@mixin h5 {
+  @include heading;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+
+@mixin body-lg {
+  font-size: 24px;
+  line-height: 34px;
+}
+
+@mixin body {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+@mixin body-sm {
+  font-size: 14px;
+  line-height: 24px;
+}

@@ -1,4 +1,3 @@
-
 {{ define "main" }}
 
 {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
@@ -10,13 +9,13 @@
 {{ $section_count := len $section }}
 
 
-  <article class="">
+  <article>
     {{ .Content }}
 
-    <section class="w-100 mw8">
+    <section>
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (first $n_posts $section) }}
-          <div class="relative w-100 mb4">
+          <div>
             <h2><a href="{{ .Permalink }}" class="link black dim">
               {{ .Title }}
             </a></h2>
@@ -26,4 +25,5 @@
         {{ end }}
       </section>
   </article>
+
 {{ end }}

@@ -1,4 +1,27 @@
 baseURL = ""
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Blenderbox"
 theme = "blenderbox"
+
+[menu]
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = -110
+
+  [[menu.main]]
+    name = "Style Guide"
+    url = "/style-guide/"
+    weight = -100
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = -90
+
+# html in md
+# [markup]
+#   [markup.goldmark]
+#     [markup.goldmark.renderer]
+#       unsafe = true
