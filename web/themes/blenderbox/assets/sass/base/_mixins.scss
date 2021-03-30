@@ -3,7 +3,8 @@ $breakpoints: (
   'xs':  576px,
   'sm':  768px,
   'md':  992px,
-  'lg':  1200px
+  'lg':  1200px,
+  'xl': 1530px
 ) !default;
 
 @mixin breakpoint($breakpoint) {
@@ -24,17 +25,14 @@ $breakpoints: (
 
 ////////// grid
 @mixin grid($col: 1) {
-  // display: grid;
-  // grid-template-columns: repeat($col, minmax(250px, 1fr));
-  // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  // grid-gap: $grid-gap;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  & > * {
-    width: percentage(1 / $col);
-  }
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  gap: $grid-gap;
 }
+
+// @mixin grid-item() {
+//   grid-column:
+// }
 
 ////////// container
 @mixin container {
@@ -54,52 +52,179 @@ $breakpoints: (
 
 ////////// typography
 @mixin heading {
-  font-family: sans-serif;
+  font-family: $font-primary;
   font-weight: bold;
 }
 
-@mixin h1 {
-  @include heading;
-  font-size: 96px;
-  line-height: 100px;
-}
-
-@mixin h2 {
+@mixin heading-1 {
   @include heading;
   font-size: 54px;
   line-height: 60px;
+
+  @include breakpoint('md') {
+    font-size: 54px;
+    line-height: 60px;
+  }
 }
 
-@mixin h3 {
+@mixin heading-2 {
   @include heading;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 42px;
+  line-height: 56px;
+
+  @include breakpoint('md') {
+    font-size: 42px;
+    line-height: 56px;
+  }
 }
 
-@mixin h4 {
+@mixin heading-3 {
   @include heading;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 32px;
+  line-height: 38px;
+
+  @include breakpoint('md') {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
-@mixin h5 {
+@mixin heading-4 {
   @include heading;
-  font-size: 18px;
+  font-size: 28px;
   line-height: 32px;
+
+  @include breakpoint('md') {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
+@mixin heading-5 {
+  @include heading;
+  font-size: 16px;
+  line-height: 22px;
 
-@mixin body-lg {
-  font-size: 24px;
-  line-height: 34px;
+  @include breakpoint('md') {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
-@mixin body {
-  font-size: 18px;
-  line-height: 30px;
-}
-
-@mixin body-sm {
+@mixin heading-6 {
+  @include heading;
   font-size: 14px;
+  line-height: 18px;
+
+  @include breakpoint('md') {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin heading-alt-1 {
+  @include heading;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -1.2px;
+
+  @include breakpoint('md') {
+    font-size: 64px;
+    line-height: 70px;
+  }
+}
+
+@mixin body-1 {
+  font-size: 18px;
+  line-height: 26px;
+
+  @include breakpoint('md') {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@mixin body-2 {
+  font-size: 16px;
   line-height: 24px;
+
+  @include breakpoint('md') {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin body-3 {
+  font-size: 14px;
+  line-height: 20px;
+
+  @include breakpoint('md') {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@mixin text-1 {
+  font-size: 16px;
+  line-height: 18px;
+
+  @include breakpoint('md') {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+@mixin text-2 {
+  font-size: 14px;
+  line-height: 16px;
+
+  @include breakpoint('md') {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+@mixin caption {
+  font-size: 12px;
+  line-height: 16px;
+
+  @include breakpoint('md') {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@mixin callout {
+  font-size: 20px;
+  line-height: 28px;
+
+  @include breakpoint('md') {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@mixin nav-link {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  color: $nav-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $nav-link-hover;
+  }
+}
+
+@mixin text-link {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  color: $primary-base-3-10;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-base-3-30;
+    text-decoration: underline;
+  }
 }

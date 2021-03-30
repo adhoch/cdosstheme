@@ -1,14 +1,53 @@
-// colors
+// neutral
 $black: #000;
+$black-100: #161616;
+$black-80: #393939;
+$black-60: #6F6F6F;
+
 $white: #FFF;
+$white-10: #F4F4F4;
+$white-20: #E0E0E0;
+$white-40: #A8A8A8;
 
 $bbox-black: #172124;
 
+// text
+$text-10: $black-100;
+$text-20: #525252;
+$text-30: #A8A8A8;
+$text-40: $white;
+
+$nav-link: $black-100;
+$nav-link-hover: #A3A3A3;
+
+// primary
+$primary-base-1-10: #172124;
+$primary-base-1-20: #96B4BD;
+$primary-base-1-30: #394E54;
+$primary-base-2-10: #FCFF4D;
+$primary-base-2-20: #F5F6B5;
+$primary-base-2-30: #C0C240;
+$primary-base-3-10: #1C6FF0;
+$primary-base-3-20: #D5E5FF;
+$primary-base-3-30: #183A6E;
+
+// secondary
+$secondary-10: #CDECF4;
+$secondary-20: #266978;
+$secondary-30: #E24854;
+$secondary-40: #5E1015;
+$secondary-50: #FFB703;
+$secondary-60: #A5CF00;
+$secondary-70: #1B2D04;
+$secondary-80: #2E5559;
+
 // grid
-$grid-gap: 32px;
+$grid-gap: 24px;
 
 // container
 $container-max-width: 1530px;
 $outer-margin-desktop: 60px;
 $outer-margin-mobile: 30px;
 // $containerWidth: percentage(1530 / 1650);
+
+$font-primary: Helvetica, sans-serif;

@@ -1,0 +1,24 @@
+.input-text {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+  background-color: transparent;
+  border-bottom: 1px solid $black;
+
+  &::placeholder {
+    color: $black;
+  }
+
+  &.inverse {
+    color: $white;
+    border-bottom-color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.updates-12-col {
+  background-color: $secondary-10;
+
+  &-grid {
+    @include grid;
+    padding: 64px 0 0;
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+      }
+
+      &-col-2{
+        grid-column: 7 / span 6;
+      }
+    }
+  }
+
+  &-title {
+    @include heading-alt-1;
+  }
+
+  &-item {
+    margin-bottom: 48px;
+  }
+
+  &-item-category {
+    margin-bottom: 16px;
+    @include heading;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &-item-title a {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 24px;
+    line-height: 32px;
+    color: $text-10;
+    text-decoration: none;
+  }
+
+  &-item-date {
+    @include text-2;
+    color: $secondary-20;
+  }
+}

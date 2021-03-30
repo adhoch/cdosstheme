@@ -1,0 +1,43 @@
+.featured-project-12-col {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &-grid {
+    @include grid;
+    padding: 48px 0;
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+      }
+
+      &-col-2{
+        grid-column: 7 / span 6;
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 34px;
+    @include heading-alt-1;
+  }
+
+  &-description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &-tag-link {
+    display: inline-block;
+    margin-right: 8px;
+    @include text-link;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,33 +1,37 @@
+body {
+  font-family: $font-primary;
+}
+
 .text-content {
   h1 {
-    @include h1;
+    @include heading-1;
   }
 
   h2 {
-    @include h2;
+    @include heading-2;
   }
 
   h3 {
-    @include h3;
+    @include heading-3;
   }
 
   h4 {
-    @include h4;
+    @include heading-4;
   }
 
   h5 {
-    @include h5;
+    @include heading-5;
   }
 
-  .body-lg {
-    @include body-lg;
+  .body-1 {
+    @include body-1;
   }
 
-  p {
-    @include body;
+  p, .body-2 {
+    @include body-2;
   }
 
-  .body-sm {
-    @include body-sm;
+  .body-3 {
+    @include body-1;
   }
 }

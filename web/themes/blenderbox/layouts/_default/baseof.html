@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {{- partial "head.html" . -}}
   <body>
-    {{- partial "header.html" . -}}
+    {{- partial "modules/site-wide/header.html" . -}}
     <div id="content">
       {{- block "main" . }}{{- end }}
     </div>
-    {{- partial "footer.html" . -}}
+
+    {{- partial "modules/site-wide/footer.html" . -}}
+    {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" false "params" (dict "myparam" "Hugo Rocks!") ) }}
+    <script src="{{ $js.RelPermalink }}"></script>
   </body>
 </html>

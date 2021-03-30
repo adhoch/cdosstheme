@@ -1,0 +1,90 @@
+.footer {
+  padding: 40px 0;
+  background-color: $bbox-black;
+  color: $white;
+
+  &-grid {
+    @include grid;
+
+    &-col-1,
+    &-col-2 {
+      text-align: center;
+    }
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+        text-align: left;
+      }
+
+      &-col-2{
+        grid-column: 7 / span 6;
+        text-align: right;
+      }
+    }
+  }
+
+  &-title {
+    @include heading-4;
+  }
+
+  &-tagline {
+    font-size: 16px;
+    line-height: 22px;
+
+    @include breakpoint('md') {
+      margin-bottom: 64px;
+    }
+  }
+
+  &-copyright {
+    width: 100%;
+    @include caption;
+    color: $nav-link-hover;
+    text-align: center;
+
+    @include breakpoint('md') {
+      text-align: left;
+    }
+  }
+
+  &-registered {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    @include caption;
+    color: $nav-link-hover;
+
+    @include breakpoint('md') {
+      justify-content: flex-end;
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &-logo {
+    display: inline-block;
+    width: 78px;
+    
+    svg {
+      width: 100%;
+      height: auto;
+
+      path,
+      polygon,
+      rect {
+        fill: $white;
+      }
+    }
+  }
+}

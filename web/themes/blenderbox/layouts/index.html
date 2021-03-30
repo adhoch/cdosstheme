@@ -11,18 +11,24 @@
 
   <article>
     {{ .Content }}
+    
+    {{- partial "modules/home/featured-project-12-col.html" . -}}
+    {{- partial "modules/home/updates-12-col.html" . -}}
+    {{- partial "modules/site-wide/contact-form-12-col.html" . -}}
+
 
     <section>
         {{/* Range through the first $n_posts items of the section */}}
         {{ range (first $n_posts $section) }}
           <div>
-            <h2><a href="{{ .Permalink }}" class="link black dim">
+            <h2><a rel="canonical" href="{{ .Permalink }}" class="link black dim">
               {{ .Title }}
             </a></h2>
 
             {{ .Summary }}
           </div>
         {{ end }}
+
       </section>
   </article>
 

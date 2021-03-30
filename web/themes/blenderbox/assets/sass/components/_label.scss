@@ -1,0 +1,25 @@
+.label {
+  font-size: 12px;
+  line-height: 16px;
+  color: $black;
+
+  &-wrap-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0 20px;
+  }
+
+  &-character-count {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($black, 0.6);
+
+    &.inverse {
+      color: rgba($white, 0.6);
+    }
+  }
+
+  &.inverse {
+    color: $white;
+  }
+}

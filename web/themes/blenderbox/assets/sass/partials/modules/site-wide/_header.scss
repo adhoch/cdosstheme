@@ -1,0 +1,82 @@
+.header {
+  &-container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 78px;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    position: relative;
+    display: block;
+    width: 132px;
+    z-index: 3;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-menu {
+    width: 54px;
+    height: 54px;
+    margin-right: 12px;
+    background-color: $black;
+    border-radius: 50%;
+  }
+
+  &-nav-link {
+    @include nav-link;
+  }
+
+  // inverse
+  &-inverse {
+    .header-logo {
+      svg {
+        path,
+        polygon,
+        rect {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+#nav {
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    background-color: red;
+    border-radius: 50%;
+    top: 12px;
+    left: 30px;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+
+    @include breakpoint('md') {
+      left: 60px;
+    }
+
+    @include breakpoint('xl') {
+      left: calc((100vw - 1410px) / 2);
+    }
+  }
+
+  &.active {
+    &::before {
+      transform: scale(200);
+      z-index: 2;
+    }
+  }
+}

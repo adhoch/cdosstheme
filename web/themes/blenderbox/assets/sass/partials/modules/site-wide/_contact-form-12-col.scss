@@ -1,0 +1,29 @@
+.contact-form-12-col {
+
+  &-grid {
+    @include grid;
+    padding: 64px 0 48px;
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+      }
+
+      &-col-2{
+        grid-column: 7 / span 6;
+      }
+    }
+  }
+
+  &-title {
+    @include heading-alt-1;
+    color: $white;
+  }
+
+  &.home {
+    background-color: $secondary-30;
+  }
+
+}
