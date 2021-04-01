@@ -1,4 +1,7 @@
 .header {
+  margin-bottom: -78px;
+  z-index: 3;
+
   &-container {
     @include container;
     display: flex;
@@ -38,7 +41,7 @@
 
   // inverse
   &-inverse {
-    background-color: $black;
+    background-color: transparent;
 
     .header-logo {
       svg {
@@ -83,10 +86,32 @@
     }
   }
 
+  .nav-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    top: -200vh;
+    transition-delay: opacity 0.3s;
+    transition: opacity 0.3s ease-in-out;
+  }
+
   &.active {
     &::before {
       transform: scale(200);
       z-index: 2;
+    }
+
+    .nav-main {
+      visibility: visible;
+      z-index: 2;
+      opacity: 1;
+      top: 0;
     }
   }
 }

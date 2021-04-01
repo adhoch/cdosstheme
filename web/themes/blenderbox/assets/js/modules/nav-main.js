@@ -9,6 +9,5 @@ export const navMain = () => {
     e.target.classList.toggle('active');
     nav.classList.toggle('active');
 
-
   })
 }

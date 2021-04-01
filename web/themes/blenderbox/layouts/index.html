@@ -11,7 +11,7 @@
 
   <article>
     {{ .Content }}
-    
+    {{- partial "modules/site-wide/hero.html" . -}}
     {{- partial "modules/home/featured-project-12-col.html" . -}}
     {{- partial "modules/home/updates-12-col.html" . -}}
     {{- partial "modules/site-wide/contact-form-12-col.html" . -}}

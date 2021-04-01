@@ -1,3 +1,11 @@
 .nav-main {
-  display: flex;
+  // display: flex;
+
+  a {
+    display: block;
+    @include heading-3;
+    color: $white;
+    text-decoration: none;
+
+  }
 }
