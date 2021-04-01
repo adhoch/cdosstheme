@@ -22,10 +22,10 @@
         {{ range (first $n_posts $section) }}
           <div>
             <h2><a rel="canonical" href="{{ .Permalink }}" class="link black dim">
-              {{ .Title }}
+              {{/*  {{ .Title }}  */}}
             </a></h2>
 
-            {{ .Summary }}
+            {{/*  {{ .Summary }}  */}}
           </div>
         {{ end }}
 

@@ -1,37 +1,40 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-grid top">
         <div class="footer-grid-col-1">
-          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-icon">
-
+          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo-blenderbox-icon">
+            {{ readFile "static/svg/logos/blenderbox-logo-icon.svg" | safeHTML }}
           </a>
 
-          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-icon">
-
+          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo-made-in-ny">
+            <img src="img/logos/logo-made-in-ny.png" alt="Made in NY">
           </a>
           <h3 class="footer-title">Good Work for Good Causes</h3>
           <div class="footer-tagline">Humanistic digital experiences for mission driven initiatives.</div>
         </div>
         <div class="footer-grid-col-2">
-         <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-icon">
-
+          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo-nyc-small-business-services">
+            {{ readFile "static/svg/logos/nyc-small-business-services-white.svg" | safeHTML }}
           </a>
-          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-icon">
-
+          <div class="footer-logo-seperator"></div>
+          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo-ny-state-of-opportunity-white">
+            {{ readFile "static/svg/logos/ny-state-of-opportunity-white.svg" | safeHTML }}
           </a>
-          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-icon">
-
+          <div class="footer-logo-seperator"></div>
+          <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo-ny-cwobe">
+            <img src="img/logos/logo-cwobe.png" alt="Made in NY">
+            {{/*  <img src="img/logos/ny-CWOBE.png" alt="Made in NY">  */}}
           </a>
         </div>
     </div>
-    <div class="footer-grid">
+    <div class="footer-grid bottom">
         <div class="footer-grid-col-1">
           <div class="footer-copyright">&copy; 2021 Blenderbox. All rights reserved. Privacy Policy</div>
         </div>
         <div class="footer-grid-col-2">
           <div class="footer-registered">
               <a rel="canonical" href="{{ .Site.BaseURL }}" class="footer-logo">
-                {{ readFile "static/svg/logo.svg" | safeHTML }}
+                {{ readFile "static/svg/logos/blenderbox-logo.svg" | safeHTML }}
               </a>
               &nbsp; is a registered WBE in the City and State of New York
           </div>

@@ -24,3 +24,8 @@ body {
   /* Some even *more* exciting button focus styles */
   outline: 1px dotted $bbox-black;
 }
+
+img, svg {
+  width: 100%;
+  height: auto;
+}

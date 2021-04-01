@@ -38,6 +38,8 @@
 
   // inverse
   &-inverse {
+    background-color: $black;
+
     .header-logo {
       svg {
         path,
@@ -46,6 +48,14 @@
           fill: $white;
         }
       }
+    }
+
+    .header-menu {
+      background-color: $white;
+    }
+
+    .header-nav-link {
+      color: $white;
     }
   }
 }

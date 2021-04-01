@@ -3,10 +3,10 @@
     <div class="header-left">
       <button class="header-menu" aria-label="Menu"></button>
       <a rel="canonical" href="{{ .Site.BaseURL }}" class="header-logo">
-        {{ readFile "static/svg/logo.svg" | safeHTML }}
+        {{ readFile "static/svg/logos/blenderbox-logo.svg" | safeHTML }}
       </a>
     </div>
-    <a rel="canonical" href={{ ref . "get-in-touch" }} class="header-nav-link">Get in touch</a>
+    <a rel="canonical" href={{ ref . "get-in-touch" }} class="header-nav-link">Get in Touch</a>
   </div>
 </header>
 <div id="nav">

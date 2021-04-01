@@ -11,6 +11,18 @@
       text-align: center;
     }
 
+    &.top {
+      .footer-grid-col-2 {
+        margin-bottom: 16px;
+      }
+    }
+
+    &.bottom {
+      .footer-grid-col-2 {
+        grid-row: 1;
+      }
+    }
+
     @include breakpoint('md') {
       @include grid(12);
 
@@ -28,6 +40,7 @@
 
   &-title {
     @include heading-4;
+    margin-bottom: 8px;
   }
 
   &-tagline {
@@ -62,14 +75,36 @@
     }
   }
 
-  &-icon {
+  &-logo-made-in-ny {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-logo-blenderbox-icon {
     display: inline-block;
     width: 50px;
     height: 50px;
     margin-right: 16px;
     margin-bottom: 24px;
-    border-radius: 50%;
-    background-color: $white;
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      g#icon {
+        fill: $white;
+      }
+
+      path {
+        fill: $black;
+      }
+    }
   }
 
   &-logo {
@@ -87,4 +122,46 @@
       }
     }
   }
+
+  &-logo-seperator {
+    display: inline-block;
+    width: 1px;
+    height: 42px;
+    margin: 0 4px;
+    background-color: $white;
+  }
+
+  &-logo-nyc-small-business-services {
+    display: inline-block;
+    width: 77px;
+s
+    svg {
+      width: 100%;
+      height: auto;
+      max-height: 42px;
+    }
+  }
+
+  &-logo-ny-state-of-opportunity-white {
+    display: inline-block;
+    width: 107px;
+
+    svg {
+      width: 100%;
+      height: auto;
+      max-height: 42px;
+    }
+  }
+
+  &-logo-ny-cwobe {
+    display: inline-block;
+    width: 117px;
+    
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 42px;
+    }
+  }
 }
+
