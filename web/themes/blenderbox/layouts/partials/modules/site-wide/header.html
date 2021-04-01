@@ -1,14 +1,23 @@
 <header class="header header-inverse">
   <div class="header-container">
     <div class="header-left">
-      <button class="header-menu" aria-label="Menu"></button>
-      <a rel="canonical" href="{{ .Site.BaseURL }}" class="header-logo">
+      {{/*  <button class="header-menu" aria-label="Menu"></button>  */}}
+
+      <div class="hamburger-wrap">
+        <button class="hamburger hamburger--squeeze" type="button"
+          aria-label="Menu" aria-controls="navigation" aria-expanded="false">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+      <a rel="canonical" href="{{ .Site.BaseURL }}" aria-label="Blenderbox" class="header-logo">
         {{ readFile "static/svg/logos/blenderbox-logo.svg" | safeHTML }}
       </a>
     </div>
     <a rel="canonical" href={{ ref . "get-in-touch" }} class="header-nav-link">Get in Touch</a>
   </div>
 </header>
-<div id="nav">
+<div id="navigation">
   {{ partial "nav-main.html" . }}
 </div>

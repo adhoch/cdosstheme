@@ -1,13 +1,22 @@
 export const navMain = () => {
-  btnHeaderMenu = document.querySelector('.header-menu');
-  nav = document.querySelector('#nav');
+  const btnHeaderMenu = document.querySelector('.header-menu');
+  const btnToggle = document.querySelector('.hamburger');
+  const nav = document.querySelector('#navigation');
 
-  btnHeaderMenu.addEventListener('click', (e) => {
+  btnToggle.addEventListener('click', (e) => {
     e.preventDefault();
-    console.log('click');
 
-    e.target.classList.toggle('active');
-    nav.classList.toggle('active');
-
+    if (nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      btnToggle.setAttribute('aria-expanded', false);
+    } else {
+      nav.classList.add('active');
+      btnToggle.setAttribute('aria-expanded', true);
+    }
+    
+    
+    btnToggle.classList.toggle('is-active');
   })
+
+
 }
