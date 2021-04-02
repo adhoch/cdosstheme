@@ -1,0 +1,135 @@
+---
+label: Case Study
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: subtitle
+  label: subtitle
+- type: text
+  name: color
+  label: color
+- type: field_group
+  name: image_full_width
+  label: image_full_width
+  fields:
+  - type: file
+    name: source
+    label: source
+  - type: text
+    name: alt
+    label: alt
+- type: field_group
+  name: work_detail_intro
+  label: work_detail_intro
+  fields:
+  - type: field_group
+    name: first_column
+    label: first_column
+    fields:
+    - type: text
+      name: client
+      label: client
+    - type: field_group_list
+      name: sector
+      label: sector
+      fields:
+      - type: field_group
+        name: link
+        label: link
+        fields:
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: url
+          label: url
+    - type: field_group_list
+      name: related
+      label: related
+      fields:
+      - type: field_group
+        name: link
+        label: link
+        fields:
+        - type: text
+          name: label
+          label: label
+        - type: text
+          name: url
+          label: url
+  - type: field_group
+    name: second_column
+    label: second_column
+    fields:
+    - type: textarea
+      name: description
+      label: description
+- type: field_group
+  name: image_12_col
+  label: image_12_col
+  fields:
+  - type: file
+    name: source
+    label: source
+  - type: text
+    name: alt
+    label: alt
+- type: field_group
+  name: section_default
+  label: section_default
+  fields:
+  - type: field_group
+    name: first_column
+    label: first_column
+    fields:
+    - type: text
+      name: title
+      label: title
+  - type: field_group
+    name: second_column
+    label: second_column
+    fields:
+    - type: textarea
+      name: description
+      label: description
+    - type: field_group_list
+      name: blurbs
+      label: blurbs
+      fields:
+      - type: textarea
+        name: blurb
+        label: blurb
+- type: field_group_list
+  name: image_12_col_three
+  label: image_12_col_three
+  fields:
+  - type: field_group
+    name: image
+    label: image
+    fields:
+    - type: file
+      name: source
+      label: source
+    - type: text
+      name: alt
+      label: alt
+- type: field_group_list
+  name: image_12_col_multiple
+  label: image_12_col_multiple
+  fields:
+  - type: field_group
+    name: image
+    label: image
+    fields:
+    - type: file
+      name: source
+      label: source
+    - type: text
+      name: alt
+      label: alt
+- type: datetime
+  name: date
+  label: date
