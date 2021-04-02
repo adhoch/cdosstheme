@@ -1,0 +1,54 @@
+.work-detail-intro {
+  padding: 48px 0;
+
+  .work-detail-intro-grid {
+    @include grid;
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+      }
+
+      &-col-2 {
+        grid-column: 7 / span 6;
+      }
+    }
+  }
+
+  &-description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &-list {
+    @include grid;
+
+    &-title {
+      @include body-1;
+      font-weight: bold;
+    }
+
+    &-text {
+      @include body-2;
+
+      a {
+        display: inline-block;
+        margin-right: 16px;
+        @include text-link;
+        @include body-2;
+        color: $text-10;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover,
+        &:active {
+          color: $primary-base-3-10;
+        }
+      }
+    }
+  }
+}

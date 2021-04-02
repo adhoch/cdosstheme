@@ -1,3 +1,8 @@
 .container {
   @include container;
 }
+
+.unstyled-list {
+  list-style: none;
+  padding: 0;
+}

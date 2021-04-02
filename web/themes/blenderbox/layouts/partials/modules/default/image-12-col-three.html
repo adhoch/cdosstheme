@@ -1,0 +1,9 @@
+<section class="image-12-col-three">
+  <div class="container">
+    <div class="image-12-col-three-grid">
+      {{ range .Params.Image_12_col_three }}
+        <img src="{{ .image.source }}" alt="{{ .image.alt }}">
+      {{ end }}
+    </div>
+  </div>
+</section>
