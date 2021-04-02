@@ -1,4 +1,7 @@
 .header {
+  margin-bottom: -78px;
+  z-index: 3;
+
   &-container {
     @include container;
     display: flex;
@@ -32,13 +35,52 @@
     border-radius: 50%;
   }
 
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger-wrap {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    background-color: $black;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .hamburger-box {
+    width: 24px;
+    height: unset;
+  }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    border-radius: 0;
+  }
+
+  .hamburger-inner::before {
+    top: -6px;
+  }
+
+  .hamburger-inner::after {
+    bottom: -6px;
+  }
+
   &-nav-link {
     @include nav-link;
   }
 
   // inverse
   &-inverse {
-    background-color: $black;
+    background-color: transparent;
 
     .header-logo {
       svg {
@@ -54,24 +96,39 @@
       background-color: $white;
     }
 
+    .hamburger-wrap {
+      background-color: $white;
+    }
+
     .header-nav-link {
       color: $white;
     }
   }
 }
 
-#nav {
+@keyframes scaling {
+  From {
+      transform: scale(200);
+  }
+  To {
+      transform: scale(1);
+  }
+}
+
+#navigation {
 
   &::before {
     content: '';
     position: absolute;
     width: 54px;
     height: 54px;
-    background-color: red;
+    background-color: $black;
     border-radius: 50%;
     top: 12px;
     left: 30px;
-    transition: transform 0.5s ease-in-out;
+    transform: translateZ(0);
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease-in-out;
     z-index: -1;
 
     @include breakpoint('md') {
@@ -83,10 +140,35 @@
     }
   }
 
+  .nav-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    top: -200vh;
+    transition-delay: 0.5s;
+    transition-duration: 0.3s;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+  }
+
   &.active {
     &::before {
-      transform: scale(200);
+      width: 400vw;
+      height: 400vw;
       z-index: 2;
+    }
+
+    .nav-main {
+      visibility: visible;
+      z-index: 2;
+      opacity: 1;
+      top: 0;
     }
   }
 }

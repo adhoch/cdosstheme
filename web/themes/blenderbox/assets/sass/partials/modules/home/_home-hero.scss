@@ -1,0 +1,26 @@
+.home-hero {
+  background-color: $primary-base-1-10;
+  color: $white;
+  padding: 504px 0 42px;
+
+  &-grid {
+    @include grid(12);
+
+    &-col-1 {
+      grid-column: 1 / span 7;
+    }
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    font-family: $font-primary;
+    font-size: 92px;
+    line-height: 100px;
+    letter-spacing: -1px;
+  }
+
+  &-subtitle {
+    @include heading-4;
+    color: $nav-link-hover;
+  }
+}
