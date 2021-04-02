@@ -41,16 +41,7 @@ collections:
                 fields:
                   - { label: 'Quote', name: quote, widget: string, default: "Everything is awesome!" }
                   - { label: 'Attribution', name: attribution, widget: string, default: "So says I!" }
-              - name: multiple_images
-                label: Two or Three Image Row
-                widget: list
-                max: 3
-                min: 2
-                field: {label: Image, name: image, widget: image}
-          - name: three_wide_images
-            label: Three Image Row
-            widget: list
-            fields:
-              - {label: Image, name: first_image, widget: image}
-              - {label: Image, name: second_image, widget: image}
-              - {label: Image, name: third_image, widget: image}
+          - name: multiple_images_object
+            label: Two or Three Image Row
+            widget: object
+            field: {name: multiple_images_list, label: Multiple Images, widget: list, min: 2, max: 3, field: {label: Image, name: images_mult, widget: image}}
