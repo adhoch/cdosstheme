@@ -27,8 +27,12 @@ body {
     @include body-1;
   }
 
-  p, .body-2 {
+  .body-2 {
     @include body-2;
+  }
+
+  p {
+    margin-bottom: 16px;
   }
 
   .body-3 {

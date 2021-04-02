@@ -1,0 +1,33 @@
+<section class="work-detail-intro">
+  <div class="container">
+    <div class="work-detail-intro-grid">
+      <div class="work-detail-intro-grid-col-1">
+        <ul class="work-detail-intro-list unstyled-list">
+          <li>
+            <h3 class="work-detail-intro-list-title">Client</h3>
+            <div class="work-detail-intro-list-text">{{ .Params.Work_detail_intro.First_column.Client }}</div>
+          </li>
+          <li>
+            <h3 class="work-detail-intro-list-title">Sector</h3>
+            <div class="work-detail-intro-list-text">
+            {{ range .Params.Work_detail_intro.First_column.Sector }}
+              <a rel="canonical" href="{{ .link.label }}">{{ .link.label }}</a>
+            {{ end }}
+            </div>
+          </li>
+          <li>
+            <h3 class="work-detail-intro-list-title">Related</h3>
+            <div class="work-detail-intro-list-text">
+            {{ range .Params.Work_detail_intro.First_column.Related }}
+              <a rel="canonical" href="{{ .link.label }}">{{ .link.label }}</a>
+            {{ end }}
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="work-detail-intro-grid-col-2">
+        <div class="work-detail-intro-description text-content">{{ .Params.Work_detail_intro.Second_column.Description | markdownify }}</div>
+      </div>
+    </div>
+  </div>
+</section>

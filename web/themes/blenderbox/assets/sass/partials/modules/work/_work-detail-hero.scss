@@ -1,0 +1,31 @@
+.work-detail-hero {
+  background-color: $black;
+  color: $white;
+  padding: 270px 0 42px;
+
+  &-grid {
+    @include grid;
+
+    @include breakpoint('md') {
+      @include grid(12);
+
+      &-col-1 {
+        grid-column: 1 / span 5;
+      }
+
+      &-col-2 {
+        grid-column: 7 / span 5;
+      }
+    }
+    
+  }
+
+  &-title {
+    @include heading-alt-1;
+  }
+
+  &-subtitle {
+    @include heading-4;
+    font-weight: normal;
+  }
+}
