@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <article>
+
+    {{ partial "modules/default/default-hero.html" . (dict "context" . ) }}
+
+    {{ .Content }}
+
+    <section>
+      <div class="container">
+        <div class="work-index-grid">
+          {{ range .Pages  }}
+            {{ partial "modules/work/card-work.html" (dict "context" . ) }}
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </article>
+{{ end }}
