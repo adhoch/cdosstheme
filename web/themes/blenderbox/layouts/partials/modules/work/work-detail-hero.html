@@ -1,0 +1,16 @@
+{{ if (isset .Params "color") }}
+  <section class="work-detail-hero" style="background-color: {{ .Params.color }}">
+{{ else }}
+  <section class="work-detail-hero" >
+{{ end }}
+  <div class="container">
+    <div class="work-detail-hero-grid">
+      <div class="work-detail-hero-grid-col-1">
+        <h1 class="work-detail-hero-title">{{ .Page.Title }}</h1>
+      </div>
+      <div class="work-detail-hero-grid-col-2">
+        <h2 class="work-detail-hero-subtitle">{{ .Params.Subtitle }}</h2>
+      </div>
+    </div>
+  </div>
+</section>

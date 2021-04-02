@@ -11,25 +11,25 @@
 
   <article>
     {{ .Content }}
-    
+    {{- partial "modules/home/home-hero.html" . -}}
     {{- partial "modules/home/featured-project-12-col.html" . -}}
     {{- partial "modules/home/updates-12-col.html" . -}}
     {{- partial "modules/site-wide/contact-form-12-col.html" . -}}
 
 
-    <section>
+    {{/*  <section>  */}}
         {{/* Range through the first $n_posts items of the section */}}
-        {{ range (first $n_posts $section) }}
-          <div>
+        {{/* {{ range (first $n_posts $section) }} */}}
+          {{/*  <div>
             <h2><a rel="canonical" href="{{ .Permalink }}" class="link black dim">
-              {{/*  {{ .Title }}  */}}
+              {{ .Title }}
             </a></h2>
 
-            {{/*  {{ .Summary }}  */}}
-          </div>
-        {{ end }}
+            {{ .Summary }}
+          </div>  */}}
+        {{/* {{ end }}  */}}
 
-      </section>
+      {{/*  </section>  */}}
   </article>
 
 {{ end }}

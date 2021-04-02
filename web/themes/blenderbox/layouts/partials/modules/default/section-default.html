@@ -1,0 +1,17 @@
+<section class="section-default">
+  <div class="container">
+    <div class="section-default-grid">
+      <div class="section-default-grid-col-1">
+        <h3 class="section-default-title">{{ .Params.section_default.first_column.title }}</h3>
+      </div>
+      <div class="section-default-grid-col-2">
+        <div class="section-default-description text-content">{{ .Params.section_default.second_column.description | markdownify }}</div>
+        <div class="section-default-blurbs-grid">
+          {{ range .Params.section_default.second_column.blurbs }}
+            <div class="section-default-blurb text-content">{{ .blurb | markdownify }}</div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

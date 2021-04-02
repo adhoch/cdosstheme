@@ -20,6 +20,11 @@ theme = "blenderbox"
     url = "/about/"
     weight = -90
 
+  [[menu.main]]
+    name = "Work"
+    url = "/work/"
+    weight = -90
+
 # html in md
 # [markup]
 #   [markup.goldmark]

@@ -1,0 +1,10 @@
+.work-index {
+  &-grid {
+    @include grid;
+    padding: 48px 0 0;
+
+    @include breakpoint('md') {
+      @include grid(3);
+    } 
+  }
+}

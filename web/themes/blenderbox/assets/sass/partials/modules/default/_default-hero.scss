@@ -1,0 +1,23 @@
+.default-hero {
+  background-color: $black;
+  color: $white;
+  padding: 270px 0 42px;
+
+  &-grid {
+    @include grid(12);
+
+    &-col-1 {
+      grid-column: 1 / span 7;
+    }
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    @include heading-alt-1;
+  }
+
+  &-subtitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Home on Blenderbox</title>
+    <link>/</link>
+    <description>Recent content in Home on Blenderbox</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Apr 2021 18:48:59 -0400</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get in Touch</title>
+      <link>/get-in-touch/</link>
+      <pubDate>Mon, 29 Mar 2021 16:27:24 -0400</pubDate>
+      
+      <guid>/get-in-touch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Style Guide</title>
+      <link>/style-guide/</link>
+      <pubDate>Mon, 08 Mar 2021 17:38:03 -0500</pubDate>
+      
+      <guid>/style-guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 08 Mar 2021 17:33:22 -0500</pubDate>
+      
+      <guid>/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>/posts/my-first-post/</link>
+      <pubDate>Mon, 08 Mar 2021 13:01:35 -0500</pubDate>
+      
+      <guid>/posts/my-first-post/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat libero vel purus rutrum, quis interdum dui finibus. Nam ornare tortor vitae venenatis consectetur. Fusce accumsan justo sed tristique scelerisque. Morbi accumsan id sapien ut faucibus. Etiam at justo eu velit rutrum eleifend. Mauris vel blandit sem, a luctus nibh. Pellentesque et ligula risus. Donec mauris velit, feugiat quis tempor nec, bibendum sed sem. Praesent tellus urna, finibus at dolor et, consequat euismod libero.</description>
+    </item>
+    
   </channel>
 </rss>

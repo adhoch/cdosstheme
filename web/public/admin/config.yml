@@ -1,19 +1,56 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-local_backend: true
+  name: proxy
+  proxy_url: http://localhost:8081/api/v1
+  local_backend:
+    url: http://localhost:8081/api/v1
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: 'posts'
-    label: 'Posts'
-    folder: 'content/posts'
+  - name: 'case_studies'
+    label: 'Case Studies'
+    folder: 'content/case_studies'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    extension: '.md'
+    format: 'frontmatter'
+    slug: '{{title}}'
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
+      - { label: 'Site Name', name: 'title', widget: 'string' }
+      - { label: 'Short Description', name: 'short_description', widget: 'string' }
+      - { label: 'Color', name: 'color', widget: 'select', options: [ { label: 'Light Blue', value: '#CDECF4' },{ label: 'Dark Blue' , value: '#266978' }, { label: 'Red' , value: '#E24854' }, { label: 'Brown' , value: '#5E1015' }, { label: 'Yellow' , value: '#FFB703' }, { label: 'Green' , value: '#A5CF00' }, { label: 'Black' , value: '#1B2D04' }, { label: 'Navy' , value: '#2E5559' },] }
+      - { label: "Featured Image", name: "featured_image", widget: "image"}
+      - { label: "Card Image", name: "card_image", widget: "image"}
+      - name: body
+        widget: list
+        types:
+          - name: two_column
+            label: Two Columns
+            widget: object
+            fields:
+              - {label: First Column, name: first_column, widget: markdown}
+              - {label: Second Column, name: second_column, widget: markdown}
+          - name: full_width_image
+            label: Full Width Image
+            widget: object
+            fields:
+              - {label: Image, name: full_width_image, widget: image}
+              - label: Quote
+                name: image_quote
+                widget: object
+                fields:
+                  - { label: 'Quote', name: quote, widget: string, default: "Everything is awesome!" }
+                  - { label: 'Attribution', name: attribution, widget: string, default: "So says I!" }
+              - name: multiple_images
+                label: Two or Three Image Row
+                widget: list
+                max: 3
+                min: 2
+                field: {label: Image, name: image, widget: image}
+          - name: three_wide_images
+            label: Three Image Row
+            widget: list
+            fields:
+              - {label: Image, name: first_image, widget: image}
+              - {label: Image, name: second_image, widget: image}
+              - {label: Image, name: third_image, widget: image}
